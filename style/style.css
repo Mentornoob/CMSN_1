@@ -241,19 +241,19 @@ body {
 
 @media screen and (max-height: 800px) {
   .six .hat {
-    left: 37%;
+    left: 40%;
   }
 }
 
 @media screen and (max-height: 700px) {
   .six .hat {
-    left: 32%;
+    left: 43%;
   }
 }
 
 @media screen and (max-height: 850px) and (max-width: 450px) {
   .six .hat {
-    left: 32%;
+    left: 43%;
   }
 }
 
@@ -281,7 +281,7 @@ body {
 
   .six .hat {
     width: 50px;
-    top: -20px;
+    top: 45px;
   }
 
   .wish-hbd {
@@ -304,6 +304,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 9999;
+  /* Đảm bảo nút luôn nằm trên các phần tử khác */
 }
 
 .play-button {
