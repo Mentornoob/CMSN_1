@@ -48,7 +48,7 @@
     </div>
     <div class="six">
       <img src="img/lydia2.png" alt="" class="lydia-dp" data-node-name="imagePath">
-      <img src="img/hat.svg" alt="" class="hat">
+      <!-- <img src="img/hat.svg" alt="" class="hat"> -->
       <div class="wish">
         <h3 class="wish-hbd" data-node-name="wishHeading">Happy Birthday!</h3>
         <h5 data-node-name="wishText">I wish you all the best on your special day! ;)</h5>
@@ -126,39 +126,6 @@
       <p class="last-smile" data-node-name="outroSmiley">:)</p>
     </div>
   </div>
-  <!-- Play Music Button and Audio Element -->
-  <div class="play-button-container">
-    <button id="playMusicButton" class="play-button">Play Music</button>
-  </div>
-  <audio id="backgroundMusic" src="/music/hb.mp3" autoplay></audio>
-  
-  <!-- JavaScript for Play Music Button -->
-  <script>
-    window.addEventListener("load", function () {
-      const audio = document.getElementById("backgroundMusic");
-      const playButton = document.getElementById("playMusicButton");
-
-      // Phát nhạc khi trang tải, nếu được phép
-      audio.play().then(() => {
-        playButton.textContent = "Pause Music";
-      }).catch(error => {
-        // Nếu không thể tự phát, yêu cầu người dùng nhấn nút để phát
-        playButton.textContent = "Play Music";
-      });
-
-      // Xử lý sự kiện nhấn nút để phát/tạm dừng nhạc
-      playButton.addEventListener("click", function () {
-        if (audio.paused) {
-          audio.play();
-          playButton.textContent = "Pause Music";
-        } else {
-          audio.pause();
-          playButton.textContent = "Play Music";
-        }
-      });
-    });
-  </script>
-
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
