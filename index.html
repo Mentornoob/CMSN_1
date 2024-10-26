@@ -5,11 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Happy Birthday!!! :)</title>
+  <title>Happy Birthday HNPT !!!</title>
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" href="style/style.css">
-</head>
 
 <body>
   <div class="container">
@@ -125,6 +124,24 @@
       <p class="last-smile" data-node-name="outroSmiley">:)</p>
     </div>
   </div>
+  </head>
+  <div class="play-button-container">
+    <button id="playMusicButton" class="play-button">Play Music</button>
+  </div>
+  <audio id="backgroundMusic" src="/music/hb.mp3"></audio>
+  <script>
+    document.getElementById("playMusicButton").addEventListener("click", function () {
+      const audio = document.getElementById("backgroundMusic");
+      if (audio.paused) {
+        audio.play();
+        this.textContent = "Pause Music";
+      } else {
+        audio.pause();
+        this.textContent = "Play Music";
+      }
+    });
+  </script>
+
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
